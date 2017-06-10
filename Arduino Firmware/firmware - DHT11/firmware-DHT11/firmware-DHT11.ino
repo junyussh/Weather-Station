@@ -1,6 +1,6 @@
 #include <DHT.h>
 byte number = 0;
-#define DHTPIN 2
+#define DHTPIN 3
 #define DHTTYPE DHT11
 
 DHT sensor(DHTPIN, DHTTYPE);

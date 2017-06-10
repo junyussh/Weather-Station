@@ -1,7 +1,7 @@
-﻿<html>
+<html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>NHWS test page_VIEW</title>
+	<title>INFAS test page_VIEW</title>
 </head>
 <body>
 
@@ -13,15 +13,15 @@
     <div class="title" style="color:lightgreen;">最新觀測數據</div>
     <div>溫度：<span class="temp"></span> &deg;C</div>
     <div>濕度：<span class="content"></span>%</div>
-    <div>紫外線：<span class="content"></span></div>
-    <div>光強度：<span class="content">null</span></div>
+    <div>光強度：<span class="content"></span></div>
+    <div>土壤濕度：<span class="content">null</span></div>
   </div>
 	
   <script>
 var ul = document.getElementsByTagName("ol")[0],
   fragment = document.createDocumentFragment(); // assuming it exists
 var request = new XMLHttpRequest();
-request.open('GET', 'https://api.thingspeak.com/channels/148353/feeds.json?key=K8TNQ7BOCQ3JZMK2', false);
+request.open('GET', 'https://api.thingspeak.com/channels/285618/feeds.json?key=N5XMXU6QR5MREY1L', false);
 request.onreadystatechange = function() {
   if (request.status == 200 && request.readyState == 4) {
     // Everything get ready
@@ -44,20 +44,18 @@ request.onreadystatechange = function() {
 request.send();
 </script>
 
-<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://api.thingspeak.com/channels/148353/charts/1?bgcolor=%23ffffff&color=orange&dynamic=true&results=120&title=Temperature&type=spline"></iframe>
+<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/285618/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=%E6%BA%AB%E5%BA%A6&type=line"></iframe>
 
-<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/148353/charts/2?bgcolor=%23ffffff&color=lightgreen&dynamic=true&results=120&title=Humidity&type=spline"></iframe>
+<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/285618/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=%E6%BF%95%E5%BA%A6&type=line"></iframe>
+
 <br>
-<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/148353/charts/3?bgcolor=%23ffffff&color=purple&dynamic=true&results=120&title=UV+index&type=spline"> </iframe>
+<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/285618/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=%E5%85%89%E5%BC%B7%E5%BA%A6&type=line"></iframe>
 
-<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/148353/charts/4?bgcolor=White&color=Lightblue&dynamic=true&results=120&title=%E5%85%89%E7%85%A7%E5%BA%A6&type=spline"></iframe>
+<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/285618/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
 
+	<h3> 資料庫:ThingSpeak    測站位置:竹科實中</h3>
+	<h3>測試中<h3>
 
-	<h3> 資料庫:ThingSpeak    測站位置:內湖高中</h3>
-	<h3>&#30435;&#25511;&#20013;<h3>
-	
-	<h2 style="color:blue;">&#32043;&#22806;&#32218;&#24863;&#28204;&#20736;&#21443;&#32771;&#25976;&#20540;&#34920;</h2>
-<img width="450" height="260" src="https://www.dfrobot.com/wiki/images/thumb/7/7b/UV_index.png/799px-UV_index.png"/>
 <br>
 <input type="button" value="更新資料" onclick="location.reload()">
 <input type ="button" onclick="javascript:location.href='http://weather.nhsh.tp.edu.tw/view/main.html'" value="選擇其他測站"></input>

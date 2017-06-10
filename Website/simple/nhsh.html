@@ -20,7 +20,7 @@
 var ul = document.getElementsByTagName("ol")[0],
   fragment = document.createDocumentFragment(); // assuming it exists
 var request = new XMLHttpRequest();
-request.open('GET', 'https://api.thingspeak.com/channels/channel_NO/feeds.json?key=API-KEY', false);
+request.open('GET', 'https://api.thingspeak.com/channels/148353/feeds.json?key=K8TNQ7BOCQ3JZMK2', false);
 request.onreadystatechange = function() {
   if (request.status == 200 && request.readyState == 4) {
     // Everything get ready
