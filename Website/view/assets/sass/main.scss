@@ -1,0 +1,47 @@
+@charset "UTF-8";
+@import "normalize";
+@import "grid";
+@import "https://fonts.css.network/css?family=Roboto";
+@import "mixin";
+@import "layout";
+
+body {
+  background: url("https://images.unsplash.com/photo-1494822493217-c9840aba840c?dpr=1&auto=format&fit=crop&w=1500&h=2250&q=80&cs=tinysrgb&crop=&bg=") no-repeat fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.container {
+  @include alpha(#fff, 0.6);
+  height: 100%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.material-icons {
+  position: relative;
+}
+.card {
+  .image {
+    .content {
+      @include alpha(#fff, 0);
+    }
+    .temperture {
+      font-size: 26px;
+    }
+  }
+  .content {
+    .location {
+      text-overflow : ellipsis;
+      white-space: nowrap;
+      .material-icons {
+        padding-right: 3px;
+        color: #e91e63;
+      }
+      display: flex;
+      align-items: center;
+      font-size: 20px;
+      font-weight: 500;
+      padding-left: 5px;
+    }
+  }
+}
